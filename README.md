@@ -1,105 +1,88 @@
-# PACAR.BY/RIFQI
+# Personal Form Landing Page
 
-Website formulir kenalan dengan desain mobile-first dan neo-brutalism.
+This project is a single-page, mobile-friendly website made as a playful and expressive online form. The page is designed to present a personal introduction, collect a set of structured answers, and send the result through a static form submission flow.
 
-## Isi paket
+## What this project is
 
-- `index.html`: HTML, CSS, JavaScript, ikon SVG, dan foto wajah Rifqi dalam satu file.
-- `PETUNJUK.md`: panduan penggunaan, aktivasi email, dan catatan implementasi.
+This is not a tutorial project or a starter template. It is a complete front-end experience built for a specific purpose: to create an engaging digital form that feels personal, modern, and memorable while still being lightweight and easy to deploy.
 
-Tidak ada npm, proses build, atau file foto tambahan yang perlu dipasang.
-Font Google dimuat secara opsional. Saat tidak tersedia, halaman memakai font pengganti dari perangkat. Tidak ada file font yang disertakan.
+The website combines:
 
-## PENTING: aktifkan pengiriman email
+- a strong visual identity with bold typography and colorful accents
+- a custom form with multiple question types
+- client-side validation and feedback states
+- a compact structure without external build tooling
+- a static deployment model suitable for hosting on simple web services
 
-Penerima sudah diatur ke: **naufalrifqi203@gmail.com**.
+## Purpose of the project
 
-Pengiriman memakai FormSubmit, bukan `mailto:`. Pengunjung tidak perlu membuka aplikasi email.
+The main idea is to give someone a clean way to present themselves through a visual landing page and a structured questionnaire. Instead of a plain text form, this project turns the interaction into a more intentional experience with personality, layout, and flow.
 
-1. Jalankan `index.html` melalui web server atau unggah ke hosting statis milikmu. Gunakan HTTPS untuk situs publik.
-2. Isi formulir satu kali dari alamat situs tersebut, lalu klik **Kirim Lamaran**. Gunakan data uji milikmu sendiri.
-3. Buka inbox atau folder Spam **naufalrifqi203@gmail.com**. Cari email aktivasi dari **FormSubmit**, lalu klik tautan aktivasi.
-4. Kirim satu lamaran uji lagi dari situs tersebut dan pastikan email benar-benar diterima, lengkap dengan semua jawabannya, sebelum membagikan situs.
+It is designed to feel like a modern personal web page where a visitor can:
 
-FormSubmit mensyaratkan konfirmasi penerima sebelum meneruskan email. File ini sudah terhubung ke endpoint yang benar, tetapi status aktivasi inbox kamu belum diverifikasi. Aktivasi mungkin perlu diulang setelah mengubah alamat penerima atau konfigurasi situs. Konfirmasi yang diberikan layanan di browser bukan bukti email sudah masuk ke inbox.
+- read a short introduction
+- fill in a set of personal details
+- answer availability and preference questions
+- submit the form and trigger an email-based response workflow
 
-### Mencoba di komputer
+## Project structure
 
-Buka terminal di folder yang berisi `index.html`. Dengan Python terpasang:
+- `index.html` — the main website including HTML, CSS, and JavaScript in one file
+- `PETUNJUK.md` — internal notes and implementation details for local setup and behavior
+- `README.md` — public overview of the project
 
-```sh
-python -m http.server 8000
-```
+## Key features
 
-Di Windows, bila perintah `python` tidak tersedia tetapi Python Launcher terpasang:
+- Responsive layout optimized for mobile devices first
+- One-file implementation for simplicity and portability
+- Custom validation for required answers and form logic
+- Availability selector with time-range handling
+- Inline feedback for failed or successful submission attempts
+- Styling built with no framework dependency
 
-```sh
-py -m http.server 8000
-```
+## Why this project was built this way
 
-Di macOS/Linux, nama perintahnya bisa `python3`.
+This project is intentionally lightweight. Everything is kept in a single HTML file so it is:
 
-Buka browser di `http://localhost:8000`.
+- easy to move around
+- easy to host without a backend
+- easy to edit for quick changes
+- simple to understand for someone checking the code directly
 
-Klik dua kali file HTML hanya untuk pratinjau. Kode menolak pengiriman dari URL `file://` agar tidak menampilkan keberhasilan palsu. Internet tetap dibutuhkan untuk mengirim data ke FormSubmit. Untuk menerima pengunjung dari perangkat lain, unggah file ke hosting; localhost bukan alamat situs publik.
+The design aims to balance personality and usability: it feels less like a generic form and more like a crafted landing page with a clear goal and a memorable presentation.
 
-## Field dan perilakunya
+## How it works
 
-**Nama** adalah input teks wajib, 2-80 karakter. **Umur** menerima angka bulat 18-120 tahun. Batas minimum 18 tahun adalah konfigurasi form ini, bukan pernyataan tentang persyaratan hukum. **Hobi** berupa textarea wajib dengan batas 500 karakter dan penghitung karakter.
+The page loads as a regular website and presents a form built for a specific interaction. Users fill out the fields, the frontend validates the input, and once the form is submitted, the data is sent through a static form endpoint and processed by the chosen email service.
 
-**3 Makanan favorit** terdiri dari tiga input terpisah, masing-masing wajib dan maksimal 100 karakter. Pengisian tidak memaksa ketiga jawaban berbeda karena yang diminta adalah tiga field terpisah.
+The logic includes:
 
-**Jam Available** memiliki dua pilihan:
+- required field checks
+- character limits
+- conditional availability modes
+- time validation and summary display
+- user-friendly error messages
+- distinct success and failure states
 
-- **Pilih jam**: dua input `type="time"`, Dari dan Sampai. Nilai dan ringkasan memakai format 24 jam. Tampilan pemilih native bisa mengikuti pengaturan bahasa/jam browser atau perangkat, termasuk AM/PM pada perangkat tertentu.
-- **24 jam**: berarti tersedia seharian, bukan hanya format tampilan jam. Kedua input jam tidak wajib dan dinonaktifkan. Jawaban dikirim sebagai `24 jam (sepanjang hari)`.
+## What makes it different
 
-Rentang 22:00-02:00 diperbolehkan dan ditandai sebagai selesai pada hari berikutnya. Jam mulai dan selesai yang sama ditolak; pengguna diarahkan memilih 24 jam. Rentang yang sebelumnya diisi tetap tersedia saat kembali dari mode 24 jam. Zona waktu perangkat ditampilkan dan dikirim bersama jawaban, sehingga jam tidak otomatis diasumsikan sebagai WIB.
+This project stands out because it is not just a form; it is a themed experience. The page is built to be expressive and memorable while still remaining functional. It blends visual storytelling with practical form mechanics in a way that feels more personal than a typical business form.
 
-**Keahlian khusus** adalah input teks wajib, maksimal 250 karakter. **Persetujuan** berisi teks pakta dari permintaan dan checkbox wajib yang tidak dicentang secara otomatis. Karakter `|` di akhir kalimat asli tidak ditampilkan karena merupakan karakter penutup yang tidak diperlukan.
+## Use case
 
-## Yang dikirim ke email
+This project is suitable for scenarios where a person wants to share a short personal introduction and collect responses in a structured, visually appealing way without setting up a large application.
 
-Nama, umur, hobi, ketiga makanan favorit, mode ketersediaan, rentang waktu atau 24 jam, jam mulai/selesai, zona waktu, keahlian, persetujuan, versi dan isi pakta, ID lamaran, serta waktu pengiriman UTC.
+Examples include:
 
-Subjek email: `Lamaran Calon Pacar | [Nama]`.
-Template email: tabel bawaan FormSubmit.
+- personal web pages
+- creative proposal or introduction forms
+- one-page contact or interest forms
+- lightweight interactive landing pages
 
-Tidak ada input kontak/email pendaftar karena tidak diminta. Karena itu, email notifikasi tidak menyediakan alamat Reply-To milik pendaftar.
+## Notes
 
-## Validasi, kegagalan, dan privasi
+The repository is focused on the frontend experience rather than a full application backend. That means the project is intentionally simple, but it is still a real, usable web page designed to serve a specific purpose rather than being a generic starting point.
 
-Validasi menolak isian wajib yang kosong atau hanya spasi. Fokus dipindahkan ke field pertama yang tidak valid. Selama pengiriman, tombol dan isian dinonaktifkan untuk mencegah klik berulang atau perubahan jawaban. Tidak ada pengiriman ulang otomatis.
+## License
 
-Jika layanan gagal, menolak permintaan, membatasi frekuensi, atau koneksi terputus, isian tetap berada di halaman. Timeout 25 detik diperlakukan sebagai status belum pasti karena server mungkin sudah menerima data. Retry dengan jawaban yang sama memakai ID lamaran yang sama; ini membantu mengenali duplikat di email, bukan jaminan idempotensi server.
-
-Layar hasil baru muncul setelah respons FormSubmit menyatakan sukses (`true` atau string `"true"`). Respons `"false"` tidak dianggap sukses. Pesan aktivasi dikenali apabila layanan menyebutkannya. Tidak ada klaim bahwa frontend bisa memastikan email benar-benar masuk inbox.
-
-Tidak ada penyimpanan jawaban di localStorage, sessionStorage, database, atau layanan analitik yang ditambahkan oleh file ini. Jawaban tetap di memori halaman sampai pengguna memulai formulir baru, memuat ulang, atau menutup halaman; browser dapat menerapkan perilaku pemulihan formnya sendiri. FormSubmit memproses kiriman sesuai kebijakan layanannya. Pengguna diberi penjelasan di dekat tombol kirim.
-
-Alamat penerima dan endpoint dapat dilihat di source HTML, sebagaimana endpoint form publik. Tidak ada password Gmail, kredensial SMTP, atau API key rahasia di frontend. Jangan menambahkannya.
-
-Implementasi memakai honeypot dasar dan `_captcha=false` untuk alur AJAX tanpa pindah halaman. Ini bukan perlindungan spam yang kuat. Untuk publikasi dengan risiko spam/traffic tinggi, pindahkan pengiriman ke backend dengan validasi server, pembatasan request, dan CAPTCHA yang diverifikasi server. Validasi di browser tidak mencegah orang mengirim request langsung ke endpoint.
-
-Halaman memakai `noindex, nofollow` agar tidak sengaja dioptimalkan untuk pencarian. Ini bukan kontrol akses; siapa pun yang mengetahui URL publik dapat membukanya.
-
-## Pengujian yang sudah dilakukan
-
-20 pemeriksaan lolos pada Chromium 144 dengan viewport 320, 360, 390, 430, 768, 920, 1024, dan 1440 piksel. Pemeriksaan meliputi susunan field, overflow horizontal, validasi, persetujuan wajib, mode 24 jam, lintas tengah malam, kelengkapan payload, reset, pencegahan klik ganda, pemeliharaan jawaban setelah gagal, offline, timeout, rate limit, dan respons aktivasi. Teks jawaban ditampilkan memakai `textContent`, bukan HTML mentah.
-
-**Batas pengujian:** HTML dirender di dokumen browser dalam memori karena navigasi jaringan browser lingkungan pengembangan dibatasi. Font eksternal memakai fallback lokal. Request pengiriman diuji dengan respons jaringan simulasi; **tidak ada email uji yang dikirim ke inbox kamu**. Pengiriman nyata dari situs publik, aktivasi akun, dan penerimaan di Gmail tetap perlu diuji mengikuti langkah aktivasi di atas. Belum diuji pada perangkat iOS/Android fisik atau Safari.
-
-## Mengubah konfigurasi
-
-- Email penerima: ubah `RECIPIENT_EMAIL` di bagian `<script>` dan alamat pada atribut `action` form.
-- Warna utama: ubah variabel `--paper`, `--ink`, `--pink`, dan `--lime` di CSS.
-- Batas umur: ubah `min`/`max` pada input `umur` dan validasi di `errorMessage()`.
-- Batas karakter: ubah `maxlength` input terkait dan teks penghitung bila relevan.
-- Foto sudah dipotong ke wajah dari foto asli yang diberikan; tubuh dan metadata foto asli tidak disertakan. Untuk menggantinya, ubah `src` pada gambar di `.portrait-frame`.
-
-## Dokumentasi acuan
-
-- FormSubmit setup dan opsi: https://formsubmit.co/
-- AJAX/fetch: https://formsubmit.co/ajax-documentation
-- Aktivasi, troubleshooting, dan web server: https://formsubmit.co/help
-- Input waktu native: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/time
+This project is shared as a personal web project and can be adapted for similar use cases. Please review the hosting and form-service configuration before publishing it publicly.
