@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ee">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Formulir kenalan sama Rifqi. No CV, just you. Jujur itu menarik!">
+  <title>Calon Pacar Wanted! | Kenalan sama Rifqi</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23ff72ad'/%3E%3Cpath d='M32 50L12 31C-1 15 21 4 32 19C43 4 65 15 52 31Z' fill='%23151515'/%3E%3C/svg%3E">
+  <!-- Fonts are optional. System fallbacks keep the form usable offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;650;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style>
+    @font-face { font-family: 'Poster Fallback'; src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'); font-weight: 400; font-style: normal; font-display: swap; }
+    :root {
+      --paper: #f7f5ee; --white: #fffefa; --ink: #151515; --muted: #5d5b57;
+      --pink: #ff72ad; --lime: #e3f54c; --line: #d7d5cd; --error: #a5223d;
+      --display: 'Anton', Impact, 'Poster Fallback', 'Arial Narrow', sans-serif;
+      --body: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --mono: 'Space Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+    body::before { content: ''; position: fixed; inset: 0; z-index: -1; opacity: .4; pointer-events: none; background-image: radial-gradient(#c9c6be .6px, transparent .6px); background-size: 9px 9px; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+    button, a { touch-action: manipulation; }
+    button { cursor: pointer; }
+    a { color: inherit; text-underline-offset: 4px; }
+    svg { display: block; flex-shrink: 0; }
+    h1, h2, h3, p, figure { margin: 0; }
+    fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+    legend { padding: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    :focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    input:focus-visible, textarea:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+    .skip-link { position: fixed; top: -100px; left: 16px; z-index: 20; padding: 12px 20px; border: 2px solid; background: var(--lime); font-weight: 800; }
+    .skip-link:focus { top: 12px; }
+    .shell { width: min(1180px, calc(100% - 36px)); margin-inline: auto; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 78px; border-bottom: 2px solid var(--ink); }
+    .brand { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; font-family: var(--mono); font-size: 11px; font-weight: 700; text-decoration: none; letter-spacing: -.4px; }
+    .brand-icon { display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid var(--ink); background: var(--pink); box-shadow: 2px 2px 0 var(--ink); transform: rotate(-5deg); }
+    .open-badge { display: flex; gap: 6px; align-items: center; font-size: 10px; font-family: var(--mono); font-weight: 700; white-space: nowrap; }
+    .open-dot { width: 8px; height: 8px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--lime); }
+    .layout { display: grid; gap: 44px; align-items: start; padding-block: 36px 64px; }
+    .hero { position: relative; }
+    .eyebrow { display: flex; align-items: center; gap: 8px; margin-bottom: 21px; font: 10px/1.6 var(--mono); letter-spacing: .4px; }
+    .eyebrow::before { content: ''; width: 20px; height: 8px; background: var(--lime); border: 1.5px solid var(--ink); box-shadow: 5px 0 0 var(--pink); margin-right: 4px; }
+    .hero h1 { font-family: var(--display); font-size: clamp(46px, 12vw, 74px); line-height: 1.02; letter-spacing: -.7px; font-weight: 400; }
+    .hero h1 span { display: block; }
+    .hero h1 .headline-tape { display: table; max-width: 100%; margin-top: 11px; padding: 9px 10px 11px; border: 3px solid var(--ink); background: var(--pink); box-shadow: 5px 5px 0 var(--ink); font-size: .82em; line-height: 1; transform: rotate(-2deg); }
+    .hero-copy { max-width: 340px; margin-top: 27px; font-size: 16px; line-height: 1.65; }
+    .profile-scene { position: relative; width: min(335px, 100%); height: 295px; margin: 20px auto 14px; }
+    .portrait-frame { position: absolute; top: 25px; left: 22px; width: 186px; height: 222px; padding: 9px; border: 3px solid var(--ink); border-radius: 49% 46% 44% 47%; background: var(--lime); box-shadow: 6px 6px 0 var(--ink); transform: rotate(-7deg); }
+    .portrait-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; border: 2px solid var(--ink); border-radius: 48% 44% 43% 47%; }
+    .crown { position: absolute; width: 71px; height: 60px; left: 20px; top: -34px; transform: rotate(-10deg); }
+    .hello-label { position: absolute; top: 221px; left: 28px; z-index: 2; background: var(--white); border: 2px solid var(--ink); padding: 8px 13px 9px; font: 25px/1 var(--display); transform: rotate(-5deg); box-shadow: 4px 4px 0 var(--pink); }
+    .hello-label span { display: block; margin-bottom: 5px; font: 10px/1 var(--mono); letter-spacing: 1px; }
+    .good-sticker { position: absolute; top: 38px; right: 0; width: 112px; padding: 12px 9px 10px; border: 2.5px solid var(--ink); background: var(--lime); font: 23px/1.03 var(--display); text-align: center; transform: rotate(8deg); box-shadow: 3px 3px 0 var(--ink); }
+    .good-sticker svg { margin: 9px auto 0; }
+    .little-heart { position: absolute; right: 38px; top: 190px; width: 47px; height: 49px; transform: rotate(12deg); }
+    .little-spark { position: absolute; top: 145px; left: 0; width: 26px; height: 26px; }
+    .profile-caption { position: absolute; bottom: 0; right: 0; font: 10px/1.65 var(--mono); text-align: right; transform: rotate(-5deg); }
+    .hero-bottom { max-width: 370px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; width: 100%; min-height: 56px; padding: 14px 18px; border: 2.5px solid var(--ink); border-radius: 0; background: var(--ink); color: var(--white); font: 20px/1.2 var(--display); letter-spacing: .6px; text-decoration: none; box-shadow: 4px 4px 0 var(--pink); transition: transform .15s, box-shadow .15s; }
+    .btn svg { width: 23px; height: 23px; color: var(--pink); }
+    .btn:active:not(:disabled) { transform: translate(3px,3px); box-shadow: 1px 1px 0 var(--pink); }
+    .btn:disabled { cursor: wait; opacity: .7; }
+    .hero-note { text-align: center; font: 10px/1.7 var(--mono); color: var(--muted); margin-top: 15px; }
+    .hero-footnote { display: none; }
+    .form-card { min-width: 0; background: var(--white); border: 2.5px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); scroll-margin-top: 24px; }
+    .card-ribbon { display: flex; justify-content: space-between; align-items: center; padding: 10px 17px; border-bottom: 2.5px solid var(--ink); background: var(--lime); font: 10px/1.5 var(--mono); font-weight: 700; letter-spacing: .5px; }
+    .card-ribbon svg { width: 17px; height: 17px; }
+    .card-inner { padding: 23px 19px 25px; }
+    .form-heading { font: 37px/1.1 var(--display); font-weight: 400; letter-spacing: -.3px; }
+    .form-intro { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .progress-row { display: flex; align-items: center; gap: 13px; margin-top: 23px; }
+    progress { display: block; width: 100%; height: 9px; border: 1.5px solid var(--ink); border-radius: 0; background: var(--paper); appearance: none; -webkit-appearance: none; }
+    progress::-webkit-progress-bar { background: var(--paper); }
+    progress::-webkit-progress-value { background: var(--pink); transition: width .2s; }
+    progress::-moz-progress-bar { background: var(--pink); }
+    .progress-label { font: 10px/1.5 var(--mono); white-space: nowrap; }
+    .section-title { display: flex; align-items: center; gap: 10px; margin: 30px 0 21px; font: 12px/1.5 var(--mono); font-weight: 700; letter-spacing: .3px; }
+    .section-number { display: grid; place-items: center; width: 27px; height: 27px; flex-shrink: 0; border: 1.5px solid var(--ink); background: var(--pink); font-size: 11px; transform: rotate(-4deg); }
+    .section-title::after { content: ''; height: 1px; flex: 1; background: var(--line); }
+    .field { margin-bottom: 21px; min-width: 0; }
+    .field-label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 800; line-height: 1.4; }
+    .required { color: var(--error); margin-left: 3px; }
+    .input, textarea { display: block; width: 100%; max-width: 100%; min-width: 0; min-height: 51px; padding: 12px 13px; border: 1.5px solid var(--ink); border-radius: 0; background: var(--white); font-size: 16px; line-height: 1.45; box-shadow: 2px 2px 0 #e2dfd5; transition: background .15s, box-shadow .15s; }
+    .input::placeholder, textarea::placeholder { color: #78756f; opacity: 1; font-size: 14px; }
+    .input:hover:not(:disabled), textarea:hover:not(:disabled) { background: #fffef4; }
+    .input:focus, textarea:focus { border-color: var(--ink); box-shadow: 3px 3px 0 var(--pink); }
+    textarea { min-height: 106px; resize: vertical; }
+    .suffix-input { position: relative; }
+    .suffix-input input { padding-right: 62px; }
+    .input-suffix { position: absolute; right: 13px; top: 15px; pointer-events: none; font-size: 13px; color: var(--muted); }
+    input[type='number'] { appearance: textfield; -moz-appearance: textfield; }
+    input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    .helper { margin-top: 7px; font-size: 12px; line-height: 1.6; color: var(--muted); }
+    .field-bottom { display: flex; gap: 8px; justify-content: space-between; align-items: start; }
+    .counter { margin-top: 7px; font: 10px/1.6 var(--mono); white-space: nowrap; color: var(--muted); }
+    .error { margin-top: 7px; color: var(--error); font-size: 12px; font-weight: 650; line-height: 1.5; }
+    .input[aria-invalid='true'], textarea[aria-invalid='true'] { border: 2px solid var(--error); box-shadow: 2px 2px 0 #f4d7de; }
+    .food-fieldset { margin: 2px 0 24px; }
+    .food-fieldset > .helper { margin-top: -3px; margin-bottom: 12px; }
+    .food-line { display: flex; align-items: stretch; margin-top: 11px; }
+    .food-number { display: grid; place-items: center; min-width: 44px; background: var(--paper); border: 1.5px solid var(--ink); border-right: 0; font: 12px/1.3 var(--mono); font-weight: 700; }
+    .food-line:focus-within .food-number { background: var(--pink); }
+    .availability { padding: 16px; border: 1.5px solid var(--ink); background: var(--paper); margin-bottom: 23px; }
+    .availability > legend { float: left; width: 100%; margin-bottom: 4px; }
+    .availability > legend + * { clear: both; }
+    .availability-intro { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+    .availability-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+    .mode-option { position: relative; }
+    .mode-option input { position: absolute; width: 1px; height: 1px; opacity: 0; left: 50%; top: 50%; }
+    .mode-label { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 46px; padding: 10px 5px; border: 1.5px solid var(--ink); background: var(--white); font-size: 12px; font-weight: 800; cursor: pointer; text-align: center; }
+    .mode-label svg { width: 16px; height: 16px; }
+    .mode-option input:checked + .mode-label { background: var(--lime); box-shadow: 2px 2px 0 var(--ink); }
+    .mode-option input:focus-visible + .mode-label { outline: 3px solid var(--pink); outline-offset: 3px; }
+    .mode-option input:disabled + .mode-label { cursor: wait; }
+    .time-row { display: grid; grid-template-columns: minmax(0,1fr) 15px minmax(0,1fr); gap: 8px; align-items: start; }
+    .time-row .field { margin-bottom: 0; }
+    .time-row .field-label { font-size: 12px; margin-bottom: 6px; }
+    .time-divider { margin-top: 38px; text-align: center; font-weight: 800; }
+    input[type='time'] { min-height: 52px; padding-inline: 9px; font-size: 16px; font-family: var(--mono); }
+    input[type='time']::-webkit-date-and-time-value { text-align: left; }
+    input[type='time']::-webkit-calendar-picker-indicator { cursor: pointer; margin-left: 0; width: 16px; }
+    .time-summary { margin-top: 13px; font-size: 12px; font-weight: 700; line-height: 1.6; }
+    .timezone { color: var(--muted); font-size: 10px; line-height: 1.6; margin-top: 5px; overflow-wrap: anywhere; }
+    .allday-banner { border: 1.5px dashed var(--ink); padding: 15px 12px; background: var(--lime); }
+    .allday-banner strong { display: block; font: 25px/1.2 var(--display); margin-bottom: 4px; }
+    .allday-banner p { font-size: 12px; }
+    .agreement { margin-top: 32px; padding-top: 25px; border-top: 2px dashed var(--ink); }
+    .agreement-kicker { font: 9px/1.7 var(--mono); letter-spacing: .2px; margin-bottom: 13px; }
+    .agreement-heading { font: 25px/1.23 var(--display); font-weight: 400; letter-spacing: .1px; }
+    .agreement-heading .highlight { background: var(--lime); box-shadow: 5px 0 0 var(--lime), -2px 0 0 var(--lime); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+    .agreement-intro { margin-top: 18px; font-size: 13px; line-height: 1.8; }
+    .clauses { list-style: none; margin: 22px 0 0; padding: 0; counter-reset: clauses; }
+    .clauses li { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 12px; margin-top: 21px; counter-increment: clauses; }
+    .clauses li::before { content: counter(clauses); display: grid; place-items: center; width: 29px; height: 33px; border: 1.5px solid var(--ink); background: var(--pink); font: 21px/1 var(--display); box-shadow: 2px 2px 0 var(--ink); }
+    .clauses strong { display: block; font-size: 13px; line-height: 1.5; margin-bottom: 4px; }
+    .clauses p { font-size: 13px; line-height: 1.8; }
+    .agreement-closing { margin: 23px 0; font-size: 12px; line-height: 1.8; color: var(--muted); }
+    .consent-box { display: flex; gap: 11px; align-items: flex-start; background: var(--paper); padding: 15px 12px; border: 1.5px solid var(--ink); cursor: pointer; }
+    .consent-box:has(input:checked) { background: #f1f8c8; }
+    .consent-box:has(input[aria-invalid='true']) { border: 2px solid var(--error); }
+    .consent-box input { flex: 0 0 22px; width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--ink); cursor: pointer; }
+    .consent-box span { font-size: 13px; font-weight: 700; line-height: 1.65; }
+    .privacy-note { margin: 14px 0 22px; font-size: 11px; color: var(--muted); line-height: 1.75; }
+    .submit-btn { min-height: 59px; font-size: 23px; box-shadow: 4px 4px 0 var(--pink); }
+    .submit-caption { margin-top: 15px; font: 9px/1.7 var(--mono); text-align: center; color: var(--muted); }
+    .feedback { margin-top: 20px; padding: 14px; border: 2px solid var(--error); background: #fff0f3; color: #76192d; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+    .preview-notice { margin-top: 20px; border-color: var(--ink); background: #f3f8cc; color: var(--ink); }
+    .preview-notice code { font-size: 11px; }
+    .loading-dot { display: none; width: 20px; height: 20px; border: 2px solid #777; border-top-color: var(--pink); border-radius: 50%; animation: spin .7s linear infinite; }
+    .is-loading .loading-dot { display: block; }
+    .is-loading .send-heart { display: none; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .submission-status { margin-top: 12px; text-align: center; font-size: 12px; }
+    .success { padding: 40px 23px; text-align: center; }
+    .success-icon { width: 100px; height: 100px; display: grid; place-items: center; margin: 10px auto 28px; border: 3px solid var(--ink); border-radius: 49% 45% 47% 40%; background: var(--pink); box-shadow: 6px 6px 0 var(--ink); transform: rotate(-6deg); }
+    .success-icon svg { width: 53px; height: 53px; }
+    .success-label { display: inline-block; margin-bottom: 20px; padding: 5px 9px; background: var(--lime); border: 1.5px solid; font: 10px/1.5 var(--mono); }
+    .success h2 { font: 42px/1.08 var(--display); font-weight: 400; }
+    .success-copy { font-size: 14px; line-height: 1.8; margin: 20px 0; overflow-wrap: anywhere; }
+    .success-note { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 14px 0 25px; }
+    .receipt { text-align: left; border: 1.5px solid var(--ink); background: var(--paper); margin: 24px 0; }
+    .receipt summary { padding: 14px; cursor: pointer; min-height: 48px; font-weight: 800; font-size: 13px; }
+    .receipt dl { margin: 0; padding: 0 14px 14px; }
+    .receipt dt { margin-top: 14px; font: 10px/1.5 var(--mono); color: var(--muted); }
+    .receipt dd { margin: 4px 0 0; font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .btn-secondary { background: var(--lime); color: var(--ink); font-size: 18px; box-shadow: 4px 4px 0 var(--ink); }
+    .new-form-hint { margin-top: 13px; font-size: 11px; color: var(--muted); }
+    .footer { border-top: 2px solid var(--ink); padding-block: 23px 35px; display: flex; flex-direction: column; gap: 12px; justify-content: space-between; font: 10px/1.8 var(--mono); }
+    .footer strong { font-weight: 700; }
+    .footer span { color: var(--muted); }
+    .confetti { pointer-events: none; position: fixed; inset: 0; z-index: 100; overflow: hidden; }
+    .confetti i { position: absolute; top: -20px; width: 10px; height: 17px; border: 1px solid var(--ink); background: var(--pink); animation: confetti-fall 2.4s ease-in forwards; }
+    .confetti i:nth-child(3n) { background: var(--lime); }
+    .confetti i:nth-child(3n+1) { background: var(--white); }
+    @keyframes confetti-fall { to { transform: translate(var(--drift),110vh) rotate(var(--turn)); opacity: .2; } }
+    @media (hover:hover) {
+      .btn:hover:not(:disabled) { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--pink); }
+      .btn-secondary:hover { box-shadow: 6px 6px 0 var(--ink); }
+      .mode-label:hover { background: #f2f0e7; }
+    }
+    @media (min-width:540px) {
+      .shell { width: min(1180px, calc(100% - 64px)); }
+      .brand { font-size: 13px; gap: 12px; }
+      .open-badge { font-size: 11px; }
+      .hero h1 { font-size: 74px; }
+      .profile-scene { margin-inline: 20px auto; }
+      .card-inner { padding: 29px 30px 31px; }
+      .name-age-grid { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(0,1fr); gap: 18px; }
+      .form-heading { font-size: 42px; }
+      .agreement-heading { font-size: 29px; }
+      .mode-label { font-size: 13px; }
+      .footer { flex-direction: row; }
+    }
+    @media (min-width:920px) {
+      .topbar { min-height: 91px; }
+      .layout { grid-template-columns: minmax(0,.9fr) minmax(0,1.16fr); gap: clamp(36px,5vw,74px); padding-block: 52px 82px; }
+      .hero { position: sticky; top: 30px; padding-top: 4px; }
+      .hero h1 { font-size: clamp(54px,5.6vw,73px); }
+      .eyebrow { font-size: 10px; }
+      .hero-copy { font-size: 16px; max-width: 350px; }
+      .profile-scene { margin-block: 26px 20px; margin-left: 7px; }
+      .hero-footnote { display: flex; align-items: center; gap: 10px; margin-top: 32px; color: var(--muted); font: 9px/1.8 var(--mono); }
+      .hero-footnote svg { width: 28px; height: 28px; color: var(--ink); }
+      .card-ribbon { padding-inline: 27px; }
+      .card-inner { padding: 30px 28px 32px; }
+      .form-heading { font-size: 43px; }
+      .success { padding: 56px 34px; }
+    }
+    @media (min-width:1150px) {
+      .card-inner { padding-inline: 34px; }
+      .profile-scene { margin-left: 17px; }
+      .hero h1 { font-size: 76px; }
+    }
+    @media (max-width:359px) {
+      .shell { width: calc(100% - 28px); }
+      .brand { font-size: 10px; gap: 7px; }
+      .open-badge { font-size: 9px; gap: 4px; }
+      .brand-icon { width: 27px; height: 27px; }
+      .hero h1 { font-size: 44px; }
+      .card-inner { padding-inline: 14px; }
+      .form-heading { font-size: 34px; }
+      .availability { padding: 12px; }
+      .mode-label { font-size: 11px; }
+      .time-row { grid-template-columns: minmax(0,1fr); }
+      .time-divider { display: none; }
+      .time-row .field + .field { margin-top: 12px; }
+      .portrait-frame { left: 7px; width: 174px; height: 211px; }
+      .good-sticker { width: 99px; font-size: 21px; }
+      .hello-label { left: 15px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .confetti { display: none; }
+    }
+    @media print {
+      .topbar, .hero, .footer, .btn, .progress-row, .preview-notice { display: none !important; }
+      .layout, .shell { display: block; width: 100%; padding: 0; margin: 0; }
+      .form-card { border: 0; box-shadow: none; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body id="top">
+  <!-- Decorative icons are embedded; no icon library or build step is required. -->
+  <svg class="sr-only" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="icon-heart" viewBox="0 0 32 32"><path d="M16 28 4.5 16.8C-3 9.5 7 .5 16 9c9-8.5 19 0.5 11.5 7.8Z" fill="currentColor" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="icon-star" viewBox="0 0 32 32"><path d="m16 2 4 10 10 4-10 4-4 10-4-10-10-4 10-4Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+  <a class="skip-link" href="#nama">Langsung ke formulir</a>
+  <header class="topbar shell">
+    <a class="brand" href="#top" aria-label="Pacar by Rifqi, kembali ke atas">
+      <span class="brand-icon"><svg width="18" height="18" aria-hidden="true"><use href="#icon-heart"/></svg></span>
+      PACAR.BY/RIFQI
+    </a>
+    <span class="open-badge"><span class="open-dot" aria-hidden="true"></span>PENDAFTARAN DIBUKA</span>
+  </header>
+
+  <main class="layout shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">FORMULIR KENALAN / VOL. 01</p>
+      <h1 id="hero-title"><span>OPEN</span><span>RECRUITMENT:</span><span class="headline-tape">CALON PACAR</span></h1>
+      <p class="hero-copy">Cinta boleh serius.<br>Formulirnya tetap santai. <strong>Kenalan dulu, yuk.</strong></p>
+      <figure class="profile-scene" aria-label="Halo, aku Rifqi!">
+        <div class="portrait-frame">
+          <svg class="crown" viewBox="0 0 80 65" aria-hidden="true"><path d="m9 56-5-36 22 13L35 5l14 27L71 9l-5 43Z" fill="#e3f54c" stroke="#151515" stroke-width="4.5" stroke-linejoin="round"/><path d="m15 48 43-4" fill="none" stroke="#151515" stroke-width="3" stroke-linecap="round"/></svg>
+          <img src="data:image/webp;base64,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" alt="Foto wajah Rifqi tersenyum memakai kacamata." width="179" height="227" fetchpriority="high">
+        </div>
+        <figcaption class="hello-label"><span>HALO, AKU</span>RIFQI!</figcaption>
+        <div class="good-sticker" aria-hidden="true">GOOD<br>PEOPLE<br>ONLY!
+          <svg width="42" height="29" viewBox="0 0 48 32"><ellipse cx="15" cy="16" rx="10" ry="14" fill="white" stroke="#151515" stroke-width="2"/><ellipse cx="34" cy="16" rx="10" ry="14" fill="white" stroke="#151515" stroke-width="2"/><ellipse cx="12" cy="18" rx="5" ry="8" fill="#151515"/><ellipse cx="31" cy="18" rx="5" ry="8" fill="#151515"/></svg>
+        </div>
+        <svg class="little-heart" viewBox="0 0 50 52" aria-hidden="true"><path d="M24 45C-5 28 6 2 19 19 28-2 48 7 43 23c-3 9-10 16-19 22Z" fill="#ff72ad" stroke="#151515" stroke-width="3.5" stroke-linejoin="round"/><path d="m9 13-4-4m36 29 6 2" stroke="#151515" stroke-width="3" stroke-linecap="round"/></svg>
+        <svg class="little-spark" aria-hidden="true"><use href="#icon-star"/></svg>
+        <span class="profile-caption" aria-hidden="true">MUNGKIN KAMU<br>YANG DICARI? &#8599;</span>
+      </figure>
+      <div class="hero-bottom">
+        <a class="btn" id="start-button" href="#form-card">OKE, KENALAN YUK <svg aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        <p class="hero-note">Bukan interview. Nggak ada tes Excel.</p>
+      </div>
+      <p class="hero-footnote"><svg aria-hidden="true"><use href="#icon-star"/></svg>NO CV. JUST YOU.<br>JUJUR ITU JAUH LEBIH MENARIK.</p>
+    </section>
+
+    <section id="form-card" class="form-card" aria-labelledby="form-title">
+      <div class="card-ribbon"><span>FORMULIR PENDAFTARAN</span><svg aria-hidden="true"><use href="#icon-heart"/></svg></div>
+      <div id="form-content" class="card-inner">
+        <h2 id="form-title" class="form-heading" tabindex="-1">Mulai dari kamu.</h2>
+        <p class="form-intro">Nggak perlu jawaban sempurna. Cukup jadi diri sendiri.<br>Semua kolom bertanda <span class="required">*</span> wajib diisi.</p>
+        <div class="progress-row">
+          <progress id="completion" max="9" value="0" aria-label="Kelengkapan formulir"></progress>
+          <span class="progress-label" id="completion-label">0/9 TERISI</span>
+        </div>
+        <div id="preview-notice" class="feedback preview-notice" hidden>
+          <strong>Mode pratinjau lokal.</strong> Tampilannya bisa dicoba di sini. Untuk mengirim email, buka file lewat <code>localhost</code> atau website yang sudah di-host, bukan dengan klik dua kali file HTML.
+        </div>
+        <noscript><p class="feedback">Aktifkan JavaScript untuk menggunakan pilihan 24 jam, validasi, dan pengiriman formulir.</p><style>#application-form { display:none }</style></noscript>
+
+        <!--
+          EMAIL SETUP: Submit once from your hosted website, then open the activation
+          email sent by FormSubmit to naufalrifqi203@gmail.com. Until activated,
+          forwarding is pending. Never put SMTP passwords/API secrets in this file.
+          Docs: https://formsubmit.co/ and https://formsubmit.co/ajax-documentation
+        -->
+        <form id="application-form" action="https://formsubmit.co/naufalrifqi203@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Client-side honeypot is a basic spam deterrent, not strong security. -->
+          <div hidden aria-hidden="true"><label for="website">Biarkan kosong</label><input id="website" name="_honey" type="text" autocomplete="off" tabindex="-1"></div>
+          <fieldset id="form-fields">
+            <legend class="sr-only">Jawaban lamaran calon pacar</legend>
+            <h3 class="section-title"><span class="section-number" aria-hidden="true">01</span>THE MAIN CHARACTER</h3>
+            <div class="name-age-grid">
+              <div class="field">
+                <label class="field-label" for="nama">Nama<span class="required" aria-hidden="true">*</span></label>
+                <input class="input" id="nama" name="Nama" type="text" autocomplete="name" placeholder="Nama kamu yang asli" required minlength="2" maxlength="80" aria-describedby="nama-error">
+                <p class="error" id="nama-error" hidden></p>
+              </div>
+              <div class="field">
+                <label class="field-label" for="umur">Umur<span class="required" aria-hidden="true">*</span></label>
+                <div class="suffix-input"><input class="input" id="umur" name="Umur" type="number" inputmode="numeric" placeholder="25" min="18" max="120" step="1" required aria-describedby="umur-hint umur-error"><span class="input-suffix" aria-hidden="true">tahun</span></div>
+                <p class="helper" id="umur-hint">Khusus usia 18 tahun ke atas.</p>
+                <p class="error" id="umur-error" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field-label" for="hobi">Hobi<span class="required" aria-hidden="true">*</span></label>
+              <textarea id="hobi" name="Hobi" placeholder="Kalau lagi senggang, biasanya kamu ngapain?" rows="3" maxlength="500" required aria-describedby="hobi-hint hobi-error"></textarea>
+              <div class="field-bottom"><p id="hobi-hint" class="helper">Dari nge-gym sampai rebahan, ceritain aja.</p><output class="counter" id="hobi-counter" for="hobi" aria-label="Jumlah karakter hobi">0/500</output></div>
+              <p class="error" id="hobi-error" hidden></p>
+            </div>
+            <fieldset class="food-fieldset">
+              <legend class="field-label">3 Makanan favorit<span class="required" aria-hidden="true">*</span></legend>
+              <p class="helper" id="food-hint">Biar nanti nggak debat, &ldquo;makan apa?&rdquo; &ldquo;Terserah.&rdquo;</p>
+              <div class="food-line"><label class="food-number" for="makanan1"><span aria-hidden="true">01</span><span class="sr-only">Makanan favorit pertama</span></label><input class="input" id="makanan1" name="Makanan favorit 1" type="text" placeholder="Contoh: nasi goreng" maxlength="100" required aria-describedby="food-hint makanan1-error"></div>
+              <p class="error" id="makanan1-error" hidden></p>
+              <div class="food-line"><label class="food-number" for="makanan2"><span aria-hidden="true">02</span><span class="sr-only">Makanan favorit kedua</span></label><input class="input" id="makanan2" name="Makanan favorit 2" type="text" placeholder="Contoh: sushi" maxlength="100" required aria-describedby="food-hint makanan2-error"></div>
+              <p class="error" id="makanan2-error" hidden></p>
+              <div class="food-line"><label class="food-number" for="makanan3"><span aria-hidden="true">03</span><span class="sr-only">Makanan favorit ketiga</span></label><input class="input" id="makanan3" name="Makanan favorit 3" type="text" placeholder="Contoh: bakso urat" maxlength="100" required aria-describedby="food-hint makanan3-error"></div>
+              <p class="error" id="makanan3-error" hidden></p>
+            </fieldset>
+
+            <h3 class="section-title"><span class="section-number" aria-hidden="true">02</span>BIAR MAKIN KENAL</h3>
+            <fieldset class="availability">
+              <legend class="field-label">Jam Available<span class="required" aria-hidden="true">*</span></legend>
+              <p class="availability-intro">Kapan enaknya kita ngobrol?</p>
+              <div class="availability-tabs">
+                <div class="mode-option"><input type="radio" id="mode-range" name="Mode ketersediaan" value="Rentang jam" checked><label class="mode-label" for="mode-range"><svg aria-hidden="true"><use href="#icon-clock"/></svg>Pilih jam</label></div>
+                <div class="mode-option"><input type="radio" id="mode-allday" name="Mode ketersediaan" value="24 jam"><label class="mode-label" for="mode-allday"><svg aria-hidden="true"><use href="#icon-star"/></svg>24 jam</label></div>
+              </div>
+              <div id="time-inputs" class="time-row">
+                <div class="field"><label class="field-label" for="jam-mulai">Dari</label><input class="input" id="jam-mulai" name="Jam mulai" type="time" lang="en-GB" step="60" required aria-describedby="time-summary jam-mulai-error"><p class="error" id="jam-mulai-error" hidden></p></div>
+                <span class="time-divider" aria-hidden="true">&ndash;</span>
+                <div class="field"><label class="field-label" for="jam-selesai">Sampai</label><input class="input" id="jam-selesai" name="Jam selesai" type="time" lang="en-GB" step="60" required aria-describedby="time-summary jam-selesai-error"><p class="error" id="jam-selesai-error" hidden></p></div>
+              </div>
+              <div id="allday-banner" class="allday-banner" hidden><strong>24 JAM? NIAT BANGET.</strong><p>Standby seharian. Tapi tetap boleh tidur, kok.</p></div>
+              <p class="time-summary" id="time-summary" aria-live="polite">Pilih jam mulai dan selesai. Ringkasan memakai format 24 jam.</p>
+              <p class="timezone" id="timezone-label"></p>
+            </fieldset>
+            <div class="field">
+              <label class="field-label" for="keahlian">Keahlian khusus<span class="required" aria-hidden="true">*</span></label>
+              <input class="input" id="keahlian" name="Keahlian khusus" type="text" maxlength="250" required placeholder="Misal: masak, mijat, jago dengerin" aria-describedby="keahlian-hint keahlian-error">
+              <p id="keahlian-hint" class="helper">Nggak harus bisa terbang. Bikin nyaman juga boleh.</p>
+              <p class="error" id="keahlian-error" hidden></p>
+            </div>
+
+            <section class="agreement" aria-labelledby="agreement-title">
+              <p class="agreement-kicker">03 / BACA DULU. INI BUKAN S&amp;K BIASA.</p>
+              <h3 id="agreement-title" class="agreement-heading"><span class="highlight">LEMBAR PERSETUJUAN &amp; PAKTA INTEGRITAS CALON PACAR</span></h3>
+              <div id="agreement-copy">
+                <p class="agreement-intro">Dengan menandatangani/mengisi formulir ini, pendaftar secara sadar dan tanpa paksaan menyatakan <strong>SETUJU</strong> untuk mematuhi pasal-pasal berikut:</p>
+                <ol class="clauses">
+                  <li><div><strong>Pasal Siap Siaga (Call Duty):</strong><p>Bersedia dan sanggup di-telepon.</p></div></li>
+                  <li><div><strong>Pasal Pendengar Setia:</strong><p>Sanggup mendengarkan seluruh curhatan, drama seharian, dan gosip tanpa memotong pembicaraan, menghujat, atau ketiduran di tengah cerita.</p></div></li>
+                  <li><div><strong>Pasal Standar Keselamatan Berkendara:</strong><p>Wajib memberikan/menerima pelukan erat (<em>motorcycle hug</em>) setiap kali naik motor bareng, demi keamanan, kenyamanan, dan kehangatan bersama di jalan.</p></div></li>
+                </ol>
+                <p class="agreement-closing"><em>Konstruksi rasa sayang dan kenyamanan berlaku sejak formulir ini disetujui.</em></p>
+              </div>
+              <label class="consent-box" for="setuju"><input id="setuju" name="Persetujuan" type="checkbox" required value="SETUJU" aria-describedby="setuju-error privacy-note"><span>Saya sudah membaca dan setuju dengan seluruh pasal di atas.<span class="required" aria-hidden="true">*</span></span></label>
+              <p class="error" id="setuju-error" hidden></p>
+              <p id="privacy-note" class="privacy-note">Dengan mengirim, kamu mengizinkan jawabanmu diproses oleh FormSubmit dan diteruskan ke email Rifqi. Jangan cantumkan data sensitif. Form ini buat kenalan; batasan dan kenyamanan tetap dibicarakan bersama.</p>
+            </section>
+            <button class="btn submit-btn" id="submit-button" type="submit"><span id="submit-label">KIRIM LAMARAN</span><svg class="send-heart" aria-hidden="true"><use href="#icon-heart"/></svg><span class="loading-dot" aria-hidden="true"></span></button>
+            <p class="submit-caption">NIAT BAIK SUDAH. TINGGAL KLIK. &#9829;</p>
+          </fieldset>
+          <p id="submission-status" class="submission-status" role="status" aria-live="polite"></p>
+          <div id="submit-feedback" class="feedback" role="alert" tabindex="-1" hidden></div>
+        </form>
+      </div>
+      <section id="success-view" class="success" aria-labelledby="success-title" hidden>
+        <div class="success-icon"><svg aria-hidden="true"><use href="#icon-check"/></svg></div>
+        <p id="success-label" class="success-label">SATU LANGKAH LEBIH DEKAT</p>
+        <h2 id="success-title" tabindex="-1">Lamaranmu<br>sudah diajukan!</h2>
+        <p class="success-copy" id="success-copy"></p>
+        <p class="success-note" id="success-note">Jawaban diterima oleh layanan pengiriman untuk diteruskan ke email Rifqi. Status ini bukan konfirmasi bahwa email sudah masuk ke inbox.</p>
+        <details class="receipt"><summary>Lihat jawaban yang kamu kirim</summary><dl id="receipt-data"></dl></details>
+        <button id="new-form" class="btn btn-secondary" type="button">ISI LAMARAN BARU <svg aria-hidden="true" style="color:inherit"><use href="#icon-arrow"/></svg></button>
+        <p class="new-form-hint">Memulai formulir baru akan mengosongkan jawaban di perangkat ini.</p>
+      </section>
+    </section>
+  </main>
+  <footer class="footer shell"><strong>PACAR.BY/RIFQI <span>&nbsp; / &nbsp; NO CV. JUST YOU.</span></strong><span>Dibuat dengan niat. Ditambah sedikit nekat. &#9829;</span></footer>
+
+  <script>
+    'use strict';
+    (() => {
+      // Public receiving address, NOT an SMTP credential. Never embed private keys.
+      const RECIPIENT_EMAIL = 'naufalrifqi203@gmail.com';
+      const ENDPOINT = 'https://formsubmit.co/ajax/' + RECIPIENT_EMAIL;
+      const REQUEST_TIMEOUT_MS = 25000;
+      const PACT_VERSION = '1.0';
+      const $ = (id) => document.getElementById(id);
+      const form = $('application-form');
+      const fields = $('form-fields');
+      const feedback = $('submit-feedback');
+      const start = $('jam-mulai');
+      const end = $('jam-selesai');
+      const allDay = $('mode-allday');
+      const textIds = ['nama', 'umur', 'hobi', 'makanan1', 'makanan2', 'makanan3', 'keahlian'];
+      const validationIds = ['nama', 'umur', 'hobi', 'makanan1', 'makanan2', 'makanan3', 'jam-mulai', 'jam-selesai', 'keahlian', 'setuju'];
+      const touched = new Set();
+      let attempted = false;
+      let busy = false;
+      let submitted = false;
+      let lastAttempt = null;
+      const isHTTP = ['http:', 'https:'].includes(location.protocol);
+      const pad = (n) => String(n).padStart(2, '0');
+      let timezone = 'Zona waktu perangkat';
+      try { timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || timezone; } catch (_) { /* Keep readable fallback. */ }
+      const offset = -new Date().getTimezoneOffset();
+      const utcOffset = 'UTC' + (offset >= 0 ? '+' : '-') + pad(Math.floor(Math.abs(offset) / 60)) + ':' + pad(Math.abs(offset) % 60);
+      const timezoneDisplay = timezone + ' (' + utcOffset + ')';
+      $('timezone-label').textContent = 'Mengikuti zona waktu perangkat: ' + timezoneDisplay + '.';
+      $('preview-notice').hidden = isHTTP;
+
+      function timeMinutes(value) {
+        if (!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value)) return null;
+        const parts = value.split(':').map(Number);
+        return parts[0] * 60 + parts[1];
+      }
+
+      function getAvailability() {
+        if (allDay.checked) return { valid: true, allDay: true, overnight: false, text: '24 jam (sepanjang hari)', minutes: 1440 };
+        const from = timeMinutes(start.value);
+        const to = timeMinutes(end.value);
+        if (from === null || to === null) return { valid: false, allDay: false, overnight: false, text: '', minutes: 0 };
+        if (from === to) return { valid: false, allDay: false, overnight: false, text: '', minutes: 0 };
+        const overnight = to < from;
+        const minutes = (to - from + 1440) % 1440;
+        return {
+          valid: true, allDay: false, overnight, minutes,
+          text: start.value + ' - ' + end.value + (overnight ? ' (hari berikutnya)' : '')
+        };
+      }
+
+      function errorMessage(id) {
+        const element = $(id);
+        const value = element.value.trim();
+        if (id === 'setuju') return element.checked ? '' : 'Baca dan centang persetujuannya dulu, ya.';
+        if (id === 'jam-mulai' || id === 'jam-selesai') {
+          if (allDay.checked) return '';
+          if (timeMinutes(value) === null) return id === 'jam-mulai' ? 'Pilih jam mulai dulu.' : 'Pilih jam selesai dulu.';
+          if (id === 'jam-selesai' && start.value === end.value) return 'Jam mulai dan selesai sama. Untuk seharian penuh, pilih 24 jam.';
+          return '';
+        }
+        if (id === 'umur') {
+          if (!value) return 'Umurnya belum diisi, nih.';
+          const age = Number(value);
+          if (!/^\d{1,3}$/.test(value) || !Number.isInteger(age) || age < 18 || age > 120) return 'Isi umur dengan angka bulat antara 18 dan 120 tahun.';
+          return '';
+        }
+        if (!value) {
+          const messages = { nama: 'Kenalan dulu, namamu siapa?', hobi: 'Ceritain sedikit tentang hobimu.', keahlian: 'Sebutkan satu keahlian khususmu.' };
+          return messages[id] || 'Makanan favorit yang ini belum diisi.';
+        }
+        if (id === 'nama' && value.length < 2) return 'Nama minimal 2 karakter, ya.';
+        if (element.maxLength > 0 && value.length > element.maxLength) return 'Maksimal ' + element.maxLength + ' karakter.';
+        return '';
+      }
+
+      function showFieldError(id, message) {
+        const element = $(id);
+        const target = $(id + '-error');
+        if (message) element.setAttribute('aria-invalid', 'true');
+        else element.removeAttribute('aria-invalid');
+        target.textContent = message;
+        target.hidden = !message;
+      }
+
+      function validateOne(id) {
+        const message = errorMessage(id);
+        showFieldError(id, message);
+        return !message;
+      }
+
+      function updateProgress() {
+        const count = textIds.reduce((total, id) => total + (errorMessage(id) ? 0 : 1), 0)
+          + (getAvailability().valid ? 1 : 0) + ($('setuju').checked ? 1 : 0);
+        $('completion').value = count;
+        $('completion-label').textContent = count + '/9 TERISI';
+      }
+
+      function updateAvailability() {
+        start.disabled = allDay.checked;
+        end.disabled = allDay.checked;
+        start.required = !allDay.checked;
+        end.required = !allDay.checked;
+        $('time-inputs').hidden = allDay.checked;
+        $('allday-banner').hidden = !allDay.checked;
+        if (allDay.checked) {
+          showFieldError('jam-mulai', '');
+          showFieldError('jam-selesai', '');
+        }
+        const availability = getAvailability();
+        let text = 'Pilih jam mulai dan selesai. Ringkasan memakai format 24 jam.';
+        if (allDay.checked) text = 'Available sepanjang hari, tanpa perlu pilih jam lagi.';
+        else if (availability.valid) {
+          const hours = Math.floor(availability.minutes / 60);
+          const minutes = availability.minutes % 60;
+          const duration = [hours ? hours + ' jam' : '', minutes ? minutes + ' menit' : ''].filter(Boolean).join(' ');
+          text = availability.text + ' \u00b7 ' + duration + '.';
+        } else if (start.value && end.value && start.value === end.value) {
+          text = 'Untuk available seharian, gunakan pilihan 24 jam di atas.';
+        }
+        $('time-summary').textContent = text;
+        updateProgress();
+      }
+
+      validationIds.forEach((id) => {
+        const element = $(id);
+        element.addEventListener('blur', () => { touched.add(id); validateOne(id); });
+        element.addEventListener('input', () => {
+          if (id === 'hobi') $('hobi-counter').value = element.value.length + '/500';
+          if (touched.has(id) || attempted) validateOne(id);
+          if (id === 'jam-mulai' || id === 'jam-selesai') {
+            updateAvailability();
+            if (touched.has('jam-selesai') || attempted) validateOne('jam-selesai');
+          }
+          updateProgress();
+        });
+      });
+      form.querySelectorAll('input[name="Mode ketersediaan"]').forEach((radio) => {
+        radio.addEventListener('change', () => {
+          updateAvailability();
+          if (attempted && !allDay.checked) { validateOne('jam-mulai'); validateOne('jam-selesai'); }
+        });
+      });
+
+      $('start-button').addEventListener('click', (event) => {
+        event.preventDefault();
+        const target = submitted ? $('success-title') : $('form-title');
+        target.focus({ preventScroll: true });
+        $('form-card').scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      });
+
+      function showFeedback(message, focus = true) {
+        feedback.textContent = message;
+        feedback.hidden = false;
+        if (focus) feedback.focus();
+      }
+
+      function setBusy(value) {
+        busy = value;
+        fields.disabled = value;
+        $('submit-button').disabled = value;
+        $('submit-button').classList.toggle('is-loading', value);
+        form.setAttribute('aria-busy', String(value));
+        $('submit-label').textContent = value ? 'LAGI DIKIRIM...' : 'KIRIM LAMARAN';
+        $('submission-status').textContent = value ? 'Lamaran sedang dikirim. Jangan tutup halaman dulu, ya.' : '';
+      }
+
+      function getPactText() {
+        const intro = document.querySelector('.agreement-intro').textContent.trim();
+        const clauses = [...document.querySelectorAll('.clauses li')].map((li, i) =>
+          (i + 1) + '. ' + li.querySelector('strong').textContent.trim() + ' ' + li.querySelector('p').textContent.trim()
+        );
+        return $('agreement-title').textContent.trim() + '\n\n' + intro + '\n\n' + clauses.join('\n\n') + '\n\n' + document.querySelector('.agreement-closing').textContent.trim();
+      }
+
+      function getAnswers() {
+        const availability = getAvailability();
+        return {
+          'Nama': $('nama').value.trim(),
+          'Umur': $('umur').value.trim() + ' tahun',
+          'Hobi': $('hobi').value.trim(),
+          'Makanan favorit 1': $('makanan1').value.trim(),
+          'Makanan favorit 2': $('makanan2').value.trim(),
+          'Makanan favorit 3': $('makanan3').value.trim(),
+          'Mode ketersediaan': allDay.checked ? '24 jam' : 'Rentang jam',
+          'Jam Available': availability.text,
+          'Jam mulai': allDay.checked ? '00:00' : start.value,
+          'Jam selesai': allDay.checked ? '00:00 (hari berikutnya, genap 24 jam)' : end.value + (availability.overnight ? ' (hari berikutnya)' : ''),
+          'Zona waktu ketersediaan': timezoneDisplay,
+          'Keahlian khusus': $('keahlian').value.trim(),
+          'Persetujuan': 'SETUJU - Sudah membaca dan menyetujui seluruh pasal.',
+          'Versi pakta': PACT_VERSION
+        };
+      }
+
+      function makeAttempt(answers) {
+        const signature = JSON.stringify(answers);
+        // Reuse an ID when retrying unchanged data. This is not server idempotency.
+        if (!lastAttempt || lastAttempt.signature !== signature) {
+          const id = globalThis.crypto && typeof crypto.randomUUID === 'function'
+            ? crypto.randomUUID() : Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+          lastAttempt = { signature, id: 'RIFQI-' + id, timestamp: new Date().toISOString() };
+        }
+        return lastAttempt;
+      }
+
+      function celebrate() {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const container = document.createElement('div');
+        container.className = 'confetti';
+        container.setAttribute('aria-hidden', 'true');
+        for (let i = 0; i < 26; i++) {
+          const piece = document.createElement('i');
+          piece.style.left = Math.random() * 100 + '%';
+          piece.style.animationDelay = Math.random() * .5 + 's';
+          piece.style.setProperty('--drift', (Math.random() - .5) * 160 + 'px');
+          piece.style.setProperty('--turn', Math.round(Math.random() * 720) + 'deg');
+          container.appendChild(piece);
+        }
+        document.body.appendChild(container);
+        setTimeout(() => container.remove(), 3200);
+      }
+
+      function showSuccess(answers, attempt, activationPending) {
+        submitted = true;
+        $('form-content').hidden = true;
+        $('success-view').hidden = false;
+        $('success-copy').textContent = 'Makasih, ' + answers.Nama + '! Jawabanmu sudah diterima FormSubmit untuk diteruskan ke Rifqi. Niat kenalannya sudah sampai ke tahap berikutnya.';
+        $('success-label').textContent = activationPending ? 'MENUNGGU AKTIVASI PENERIMA' : 'SATU LANGKAH LEBIH DEKAT';
+        $('success-note').textContent = activationPending
+          ? 'Layanan meminta pemilik formulir mengaktifkan email penerima terlebih dahulu. Jawaban menunggu proses penerusan, belum dikonfirmasi masuk ke inbox.'
+          : 'Jawaban diterima oleh layanan pengiriman untuk diteruskan ke email Rifqi. Status ini bukan konfirmasi bahwa email sudah masuk ke inbox.';
+        $('receipt-data').replaceChildren();
+        const receipt = { ...answers, 'ID lamaran': attempt.id, 'Waktu pengiriman (UTC)': attempt.timestamp };
+        Object.entries(receipt).forEach(([label, value]) => {
+          const term = document.createElement('dt');
+          const description = document.createElement('dd');
+          term.textContent = label;
+          description.textContent = value;
+          $('receipt-data').append(term, description);
+        });
+        $('success-title').focus({ preventScroll: true });
+        $('form-card').scrollIntoView({ block: 'start', behavior: 'auto' });
+        if (!activationPending) celebrate();
+      }
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (busy || submitted) return;
+        attempted = true;
+        feedback.hidden = true;
+        const invalid = validationIds.filter((id) => !validateOne(id));
+        if (invalid.length) {
+          showFeedback('Masih ada isian yang perlu dilengkapi. Cek kolom yang ditandai, ya.', false);
+          $(invalid[0]).focus();
+          return;
+        }
+        if ($('website').value.trim()) {
+          showFeedback('Formulir tidak dapat dikirim. Muat ulang halaman dan isi kembali secara manual.');
+          return;
+        }
+        if (!isHTTP) {
+          showFeedback('Ini masih pratinjau file lokal. Buka formulir lewat localhost atau unggah index.html ke hosting agar pengiriman email bisa berjalan. Jawabanmu belum dikirim.');
+          return;
+        }
+        if (navigator.onLine === false) {
+          showFeedback('Koneksi internet sedang terputus. Jawabanmu tetap ada di halaman ini. Sambungkan internet, lalu klik Kirim Lamaran lagi.');
+          return;
+        }
+        const answers = getAnswers();
+        const attempt = makeAttempt(answers);
+        const payload = {
+          ...answers,
+          'Isi pakta yang disetujui': getPactText(),
+          'ID lamaran': attempt.id,
+          'Waktu pengiriman (UTC)': attempt.timestamp,
+          _subject: 'Lamaran Calon Pacar | ' + answers.Nama.replace(/[\r\n\u0000-\u001f\u007f]/g, ' ').slice(0, 80),
+          _template: 'table',
+          // AJAX avoids leaving the page. For stronger protection, use a real
+          // backend with server-side validation, rate limiting and CAPTCHA.
+          _captcha: 'false',
+          _honey: '',
+          _url: location.origin + location.pathname
+        };
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+        setBusy(true);
+        try {
+          const response = await fetch(ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload),
+            signal: controller.signal,
+            credentials: 'omit',
+            mode: 'cors'
+          });
+          let result;
+          try { result = await response.json(); }
+          catch (error) { if (error.name === 'AbortError') throw error; throw new Error('UNEXPECTED_RESPONSE'); }
+          if (!response.ok) {
+            if (response.status === 429) throw new Error('RATE_LIMIT');
+            throw new Error('HTTP_ERROR');
+          }
+          // Do not treat "false" (a non-empty string) as success.
+          const accepted = result && (result.success === true || result.success === 'true');
+          const message = String(result && result.message || '');
+          const activationPending = /activat|verif|confirm/i.test(message);
+          if (!accepted) {
+            if (activationPending) throw new Error('ACTIVATION_REQUIRED');
+            throw new Error('SERVICE_REJECTED');
+          }
+          showSuccess(answers, attempt, activationPending);
+        } catch (error) {
+          // No automatic retries: a timeout does not prove that the POST failed.
+          let message;
+          if (error.name === 'AbortError') {
+            message = 'Layanan belum memberi konfirmasi setelah 25 detik. Pengiriman mungkin sudah diproses. Jawabanmu tetap ada di sini; hindari mengirim ulang berkali-kali. ID lamaran: ' + attempt.id;
+          } else if (error.message === 'RATE_LIMIT') {
+            message = 'Layanan sedang membatasi pengiriman. Tunggu beberapa menit sebelum mencoba lagi. Jawabanmu tidak dihapus.';
+          } else if (error.message === 'ACTIVATION_REQUIRED') {
+            message = 'Email penerima belum diaktifkan. Pemilik formulir perlu membuka email aktivasi dari FormSubmit terlebih dahulu. Jawabanmu tetap ada di sini.';
+          } else if (error.message === 'SERVICE_REJECTED') {
+            message = 'Layanan belum menerima lamaran ini. Jawabanmu tetap ada. Coba beberapa saat lagi; pemilik formulir juga perlu memastikan email FormSubmit sudah aktif.';
+          } else {
+            message = 'Belum ada konfirmasi pengiriman. Periksa koneksi dan coba lagi nanti. Jawabanmu tetap ada di halaman ini. Pengiriman sebelumnya mungkin sudah diproses; hindari mengirim ulang berkali-kali.';
+          }
+          showFeedback(message);
+        } finally {
+          clearTimeout(timeout);
+          setBusy(false);
+        }
+      });
+
+      $('new-form').addEventListener('click', () => {
+        form.reset();
+        attempted = false;
+        submitted = false;
+        lastAttempt = null;
+        touched.clear();
+        validationIds.forEach((id) => showFieldError(id, ''));
+        feedback.hidden = true;
+        $('hobi-counter').value = '0/500';
+        $('receipt-data').replaceChildren();
+        document.querySelector('.receipt').open = false;
+        $('success-view').hidden = true;
+        $('form-content').hidden = false;
+        updateAvailability();
+        $('form-title').focus({ preventScroll: true });
+        $('form-card').scrollIntoView({ block: 'start', behavior: 'auto' });
+      });
+
+      // Browser-restored fields (back/forward cache) should update the UI, too.
+      window.addEventListener('pageshow', () => {
+        $('hobi-counter').value = $('hobi').value.length + '/500';
+        updateAvailability();
+      });
+      updateAvailability();
+    })();
+  </script>
+</body>
+</html>
